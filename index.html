@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/5.5.0/math.min.js" type="text/javascript"></script>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script>
+<script type="text/javascript"src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>  
+
+
+
+ <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+    <script>
+    // Make the div with id 'mycell' a Sage cell
+    sagecell.makeSagecell({inputLocation:  '#mycell',
+                           template:       sagecell.templates.minimal,
+                           evalButtonText: 'Activate'});
+    // Make *any* div with class 'compute' a Sage cell
+    sagecell.makeSagecell({inputLocation: 'div.compute',
+                           evalButtonText: 'Run'});
+    </script>
+    <script type="text/javascript" async="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<style>
+                                                                                
+body {
+    background-color: #00b5e2;
+}
+
+canvas {
+    background-color: black;
+
+    padding-left: 0;
+    padding-right: 0;
+
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 800px;
+    height: 600px;
+    border:3px solid #d3d3d3;
+}
+       
+
+block_container {
+
+    text-align: center;
+
+}
+
+h1 {
+    font-size: 40pt;
+    font-family: arial;
+    color: black;
+    text-align: center;
+}
+
+h2 {
+    font-size: 30pt;
+    font-family: arial;
+    color: black;
+    text-align: center;
+}
+
+.styled {
+border: 0;
+line-height: 2.5;
+padding: 0 20px;
+font-size: 1rem;
+text-align: center;
+color: #fff;
+text-shadow: 1px 1px 1px #000;
+border-radius: 10px;
+background-color: rgba(220, 0, 0, 1);
+background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0));
+box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.6), inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+}
+
+.styled:hover {
+    background-color: rgba(255, 0, 0, 1);
+}
+
+.styled:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6), inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+</style>
+
+</head>
+<body>
+<div id="block_container"  style="background-color: #00b5e2; margin-left:10%; margin-right:10%;">
+    <p> </p>
+    <p> </p>
+    <br>
+        <h1> Mathematics with SageMath</h1>
+        <h2> CIIEC-BUAP</h2>
+         <p style="font-size: 30px; margin-left: 80%;">May 10th, 2024 </p>
+        <p style="font-size: 20px; margin-left: 80%;"><a href="https://github.com/lvillasen/Mathematics-SageMath" >Source Code</a> </p>
+        
+<p style="color:black;font-size:30px;"> SageMath (previously SAGE, "System for Algebra and Geometry Experimentation") is a free and open-source computer algebra system covering many aspects of mathematics. <br> <br>
+
+
+This Web App illustrates the use of  <a href="https://www.sagemath.org/">SageMath</a> to perform simple or advanced mathematics on a webpage with no need to install any software. <br> <br> You can edit and experiment with the code on the following <a href="https://sagecell.sagemath.org/?q=iyqcsn"> SageMathCells</a>. There are many  good tutorials on the use of SageMath, for instance <a href="https://doc.sagemath.org/html/en/tutorial/index.html">here</a> and <a href="https://melczer.ca/files/SageIntro.html">here</a>.
+<br> <br>
+
+
+        <hr>
+
+           <h2> Convert to Latex</h2>
+
+<p style="color:black;font-size:30px;"></p>
+
+<div class="compute" style="text-align:left; margin-left: 10%;"><script type="text/x-sage">
+
+%display latex
+var('z')
+z^12
+sqrt(z^2 + 1/2)
+
+</script></div>
+
+<h2> Plots</h2>
+
+<p style="color:black;font-size:30px;"></p>
+
+<div class="compute" style="text-align:left; margin-left: 10%;"><script type="text/x-sage">
+
+p1 = line([(0,0),(1,1)], legend_label='line')
+p2 = line([(1,1),(2,4)], legend_label='squared', legend_color='red')
+p1 + p2
+
+</script></div>
+
+<br> 
+
+
+<div class="compute" style="text-align:left; margin-left: 10%;"><script type="text/x-sage">
+
+i = CDF.gen()
+v = [zeta(0.5 + n/10 * i) for n in range(500)]
+L = [(z.real(), z.imag()) for z in v]
+line(L, rgbcolor=(3/4, 1/2, 5/8))S
+
+</script></div>
+
+<br> 
+
+<p style="color:black;font-size:30px;"></p>
+
+<div class="compute" style="text-align:left; margin-left: 10%;"><script type="text/x-sage">
+
+plot(sin(x), (x, -7, 7), ticks=pi/2, tick_formatter=pi, axes_labels=['$x$','$\\sin(x)$'], fontsize=14, color='red')
+
+
+</script></div>
+<br> 
+
+<div class="compute" style="text-align:left; margin-left: 10%;"><script type="text/x-sage">
+
+plot(sin, -3, 3, color='red')
+
+
+</script></div>
+
+
+<br>
+
+<div class="compute" style="text-align:left; margin-left: 10%;"><script type="text/x-sage">
+
+scatter_plot([[1,1],[2,2],[4.3,1.1]], marker='s',facecolor='green')
+
+</script></div>
+
+
+<br>
+
+<div class="compute" style="text-align:left; margin-left: 10%;"><script type="text/x-sage">
+
+def Harm_Osc(n, x):
+ return sqrt(1/(2^n*factorial(n)))/(pi)^(0.25)*e^(-x^2/2)*hermite(n,x)
+p = plot(x^2/2, (x, -3.2, 3.2), color='black') + text('$x^2/2$', (3.9, 5), color='black', fontsize=13)
+for n in range(5):
+ p += plot(Harm_Osc(n, x)/2 + n + 0.5, (x, -5, 5), color=hue(n/5.0), fill=n + 0.5) + text('$\Psi_%s$' %n, (5.2, n+0.5), color=hue(n/5.0), fontsize=13)
+show(p, axes_labels=['$x$','$E$'])
+</script></div>
+<br> 
+<br> 
+
+<h2> Fourier Series</h2>
+
+<div class="compute" style="text-align:left; margin-left: 10%;"><script type="text/x-sage">
+
+f = piecewise([((0,pi/2), -1), ((pi/2,pi), 2)])
+f.fourier_series_cosine_coefficient(0)
+f.fourier_series_sine_coefficient(5)
+s5 = f.fourier_series_partial_sum(5)
+plot(f, (0,pi)) + plot(s5, (x,0,pi), color='red')
+</script></div>
+<br> 
+<br> 
+<h2> Animated Plots</h2>
+
+<div class="compute" style="text-align:left; margin-left: 10%;"><script type="text/x-sage">
+
+frames = []
+xr = (x, 0, 1)
+for k in srange(1, 10):
+    g = plot(sin(k*x), (x, -5, 5))
+    frames.append(g)
+a = animate(frames, ymin=-1, ymax=1.0)
+a.show()
+</script></div>
+
+<br> 
+<br> 
+<h2> Discrete Fourier Transform</h2>
+
+<div class="compute" style="text-align:left; margin-left: 10%;"><script type="text/x-sage">
+
+f1(t) = 3*sin(2*pi*(3*t)) + 5*sin(2*pi*(5*t)) + 7*sin(2*pi*(7*t)) + 9*sin(2*pi*(9*t))
+p1 = plot(f1, (t, -1, 2))
+p1.show()
+size1 = 26
+
+fft_data1 = FFT(size1)
+
+for t in range(size1):
+    fft_data1[t] = f1(t/size1)
+
+p2=plot(fft_data1)
+p2.show()
+
+fft_data1.forward_transform()
+fft_freq1 = [0 for j in range(size1/2)]
+
+
+for f in range(size1/2):
+    fft_freq1[f] = abs(vector(fft_data1[f]))/(size1/2)
+
+p3=bar_chart(fft_freq1)
+p3.show()
+</script></div>
+
+
+
+
+
+
+<p style="color:black;font-size:30px;">Add your own code here. </p>
+
+ 
+        <div class="compute" style="text-align:left; margin-left: 10%;"><script type="text/x-sage">
+
+
+
+</script></div>
+<br><br><br><br><br><br>
+
+
+</body>
+</html>
