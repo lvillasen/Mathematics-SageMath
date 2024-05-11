@@ -11,7 +11,7 @@ This Web App illustrates the use of SageMath to perform simple or advanced mathe
 
 ## Live Demo
 
-https://ciiec.buap.mx/Mathematics-SageMath/
+https://ciiec.buap.mx/SageMath/
 
 ## Credits
 
